@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chamimuddupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chamimuddupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: chamimuddupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chamimuddupipelinesjavascriptdocker 
+          image: chamicontainerregistry.azurecr.io/chamimuddupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
